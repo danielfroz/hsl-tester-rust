@@ -1,4 +1,3 @@
-// use std::fs::File;
 use std::net::UdpSocket;
 use std::str;
 use std::env;
@@ -44,9 +43,7 @@ fn main() -> std::io::Result<()> {
         let now = Utc::now();
         match file {
             None => print!("{} client[{}] - {}", now.to_string(), src, str),
-            _ => {
-                write!(file.as_ref().unwrap(), "{} client[{}] - {}", now.to_string(), src, str)?;
-            }
+            _ => write!(file.as_ref().unwrap(), "{} client[{}] - {}", now.to_string(), src, str)?
         }
     }
 }
