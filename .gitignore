@@ -2,3 +2,7 @@
 
 # Ignore log files
 *.log
+*.tar.gz
+
+# Ignore binaries
+hsl-tester
